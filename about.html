@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Everyday Inclusive Supports</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/about.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="headerContent">
+                <img src="img/logo.png" alt="Everyday Inclusive Support" class="titleElement" id="logo">
+                <h1 class="titleElement">Everyday Inclusive Supports</h1>
+            </div>
+            <div id="colourLayer"></div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Services</a></li>
+                <!-- <li><a href="review.html">Testimonials</a></li> -->
+            </ul>
+        </nav>
+        <main>
+            <div id="mainContent"> 
+                <div id="headerSpacer"></div>
+                <div id="textContainer">
+                    <div id="transport">At Everyday Inclusive Supports, we understand that getting around can be a challenge for individuals living with disabilities, that's why we're proud to offer our transport service. Ensuring everyone has the freedom and safety to travel comfortably. Our friendly staff are trained to assist everyone in their various needs. We offer door to door services, with convenient pick-up or drop-off directly at your home, making transport hassle free. No matter where, we can help you get there safely.</div>
+                    <div id="personalCare"> We can assist with a range of personal care needs, helping you with dailu activities, self care needs, and access to medical appointments. Our professional staff are more than willing to help you where you need it most.</div>
+                    <div id="household">Aiding independentliving through supporting you in tasks like household cleaning, daily chores, and a range of other regular household activities. Our staff can help you keep your independence by supporting you in the areas where you need it most, allowing you to keep the independence you deserve.</div>
+                    <div id="communityAccess">Providing you with assistance with community events and social activities. We can help with transport, preparation, and assistance throughout the events you love. Whether it's sporting groups, social clubs, or one off events, we're proud to help you get out and get involved.</div>
+                    <div id="disabilitySupport">Supporting you with disability assistance, through your specific needs. We can adapt and accomodate to your specific needs, to help with your individual goals. We'd love to learn how we can support you with the unique assistance that suits you best.</div>
+                </div>
+                <ul id="serviceList">
+                    <li class="serviceListItem">Lake Mac based</li><br>
+                    <li class="serviceListItem">Improve your everyday living</li><br>
+                    <li class="serviceListItem">Personal care assistance</li><br>
+                    <li class="serviceListItem">Household tasks and daily living support</li><br>
+                    <li class="serviceListItem">Disability support</li><br>
+                    <li class="serviceListItem">Cleaning, transport, in home care</li><br>
+                    <li class="serviceListItem">Stay active and engaged</li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <a href="tel:0411101659" title="0411101659" class="contactButton"  id="phone"><img src="img/phone.svg" alt="Phone Image" class="icon"></a>
+                <a href="email:email@email.email" class="contactButton" id="email"><img src="img/email.svg" alt="Email Image" class="icon"></a>
+            </div>
+            <div id="footerSpacer"></div>
+        </main>
+        <footer>
+            © Cindy L Williams, 2025 <br>
+            Website made by Tom Williams
+        </footer>
+
+        <script>
+
+            document.querySelector('#serviceTable').addEventListener('click', (clicked) => {
+                const row = clicked.target.parentElement;
+                const table = document.getElementById("serviceTable");
+
+                if (row.classList.contains("avoidClass")) {
+                    return;
+                }
+                for (let r = 0; r < table.rows.length; r++) {
+                    let tempRow = table.rows[r];
+
+                    tempRow.classList.remove("active");
+
+                    let hideDiv = document.getElementById(r);
+                    if (hideDiv) {
+                        hideDiv.style.display = "none";
+                    }
+                }
+                clicked.target.parentElement.classList.add("active");
+                const rowIndex = clicked.target.parentElement.rowIndex;
+                document.getElementById(rowIndex.toString()).style.display = "block";
+            });
+
+        </script>
+
+    </body>
+</html>

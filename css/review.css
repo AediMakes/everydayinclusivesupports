@@ -1,0 +1,86 @@
+@import "base.css";
+
+main {
+    width: 100vw;
+    height: auto;
+}
+
+#splash {
+    background: #B2FBA5;
+    width: 60vw;
+    margin-left:1em;
+    padding-left:0;
+    transform: rotate(-3deg);
+    text-align: center;
+
+    z-index: 0;
+}
+
+/*
+<div class="flexItem">
+    <div class="reviewtext">
+
+    </div>
+    <div class="reviewPerson">
+        
+    </div>
+</div>
+*/
+
+#reviewFlex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+    gap: 1em;
+
+
+    width: 100vw;
+    height: fill-available;
+    align-items: space-between;
+    justify-items: center;
+    margin-top: 0.5em;
+}
+
+.flexItem {
+    background-color: grey;
+    color: white;
+    width: auto;
+    align-items: start;
+    padding: 1em;
+    margin: 0.5em 1em;
+    border-radius: 30px;
+
+    -webkit-box-shadow: 10px 10px 20px #0006;
+    -moz-box-shadow: 10px 10px 20px #0006;
+    box-shadow: 10px 10px 20px #0006;
+}
+
+.reviewText {
+    padding: 1em;
+    text-align: center;
+    overflow-wrap: normal;
+    color: white !important;
+}
+
+.reviewPerson {
+    text-align: start;
+}
+
+@media (min-width: 600px) {
+    #splash {
+        margin-top: 2vh;
+    }
+}
+
+@media (min-width: 1000px) {
+    #splash {
+        margin-top: 3vh;
+    }
+
+    #splash > br {
+        display: none;
+    }
+
+    #mainContent {
+    height: 95vh;
+    }
+}

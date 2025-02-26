@@ -1,0 +1,47 @@
+#contact {
+    position: fixed;
+    width: 5em;
+    height: 12em;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 1em;
+
+}
+
+.contactButton {
+    width: 3em;
+    height: 3em;
+
+    background-color: white;
+    border-style: solid;
+    border-radius: 50%;
+
+    justify-content: center;
+    align-content: center;
+}
+
+#phone {
+    border-color: #B3EBF2
+}
+
+#email {
+    border-color: #FF6961;
+}
+
+.icon {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+@media (min-width: 1000px) {
+    #contact {
+        margin-right: 4vw;
+    }
+}

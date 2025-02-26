@@ -1,0 +1,118 @@
+@import "base.css";
+@import "table.css";
+
+main {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+}
+
+#mainContent {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: auto;
+    min-height: 100vh;
+}
+
+  #textContainer div {
+    padding: 2em;
+    padding-top: 0;
+  }
+
+  #textContainer div::before {
+    display:block;
+    background: #B2FBA5;
+    width: fit-content;
+    height:auto;
+    max-height: 100px;
+    padding: 0.4em;
+    position:relative;
+    border-radius: 5px;
+    left:-1em;
+    top:0;
+    z-index:11;
+    transform: rotate(-5deg);
+  }
+
+  #transport::before {
+    content: "Transport";
+  }
+
+  #personalCare::before {
+    content: "Personal Care";
+  }
+
+  #household::before {
+    content: "Independent Living";
+  }
+
+  #communityAccess::before {
+    content: "Community Access";
+  }
+
+  #disabilitySupport::before {
+    content: "Disability Support";
+  }
+
+  @media (max-width: 1000px) {
+    #serviceList {
+      display: none;
+    }
+  }
+
+@media (min-width: 1000px) {
+
+  #headerSpacer {
+    height: 5em;
+  }
+
+  #mainContent {
+      overflow: hidden;
+      overflow-x: hidden;
+      min-height: 100vh;
+      width: 90vw;
+
+      position: relative;
+  }
+
+  #textContainer {
+      width: auto;
+      height: auto;
+      top: 4.2em;
+  }
+
+  #transport {
+    width: calc(90vw - 25em);
+  }
+
+  #serviceList, #serviceList * {
+    z-index: 5;
+  }
+  
+  #serviceList {
+    display: block;
+    background: #B2FBA5;
+    transform: rotate(-5deg);
+    text-align: left;
+  
+    padding: 1em;
+    padding-left: 2em;
+    border-radius: 15px;
+
+    position: absolute;
+    top: 4em;
+    right: 0;
+
+    height: fit-content;
+    width: fit-content;
+  }
+
+  #serviceList ul  {
+      margin-left: -2em;
+  }
+
+  #textcontainer:not(:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,185 @@
+@import "base.css";
+
+:root {
+  background: white;
+  overflow: hidden;
+}
+
+div {
+  border-radius: 5px;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+}
+
+#eyeCatch {
+  display: relative;
+  background: #B2FBA5;
+  width: 100vw;
+  padding-left:0;
+  transform: rotate(-7deg);
+  z-index: 0  ;
+}
+
+#eyeCatch > * {
+  transform: rotate(7deg);
+}
+
+#eyeCatchText {
+  padding: 2em;
+}
+
+#gotoAbout {
+  display: relative;
+  background: #FAC898;
+  width: 90vw;
+  transform: rotate(5deg);
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 1em;
+  margin-top: -0.5em;
+
+  justify-content: center;
+  align-content: center;
+
+  text-align: center;
+
+  z-index: 0;
+}
+
+#gotoAboutButton {
+  background-color: #555;
+  color: white;
+  padding: 0.2em 0.5em;
+  width: 100%;
+  border-radius: 500px;
+  text-decoration: none;
+
+  justify-content: center;
+  align-content: center;
+}
+
+#emailUs, #emailUs * {
+  z-index: 1;
+}
+
+#emailUs {
+  display: relative;
+  background: #B39EB5;
+  width: 90vw;
+  transform: rotate(-10deg);
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 1em;
+  margin-top: -0.5em;
+
+  justify-content: center;
+  align-content: center;
+
+  text-align: center;
+}
+
+#emailUsButton {
+  background-color: #555;
+  color: white;
+  padding: 0.2em 0.5em;
+  width: 100%;
+  border-radius: 500px;
+  text-decoration: none;
+
+  justify-content: center;
+  align-content: center;
+}
+
+#introText, #introText * {
+  z-index: 0;
+}
+
+#introText {
+  position: absolute;
+  background: #B2FBA5;
+  width: 90vw;
+  height: 40vh;
+  transform: rotate(-5deg);
+
+  padding: 0 1em;
+  margin-left: 1em;
+  text-align: left;
+
+  z-index: 5;
+}
+
+#eyeCatch, #gotoAbout, #emailUs, #introText {
+  -webkit-box-shadow: 0 0 10px 5px #0003;
+  -moz-box-shadow: 0 0 10px 5px #0003;
+  box-shadow: 0 0 10px 5px #0003;
+}
+
+#splashPhoto {
+  display: none;
+}
+
+#hands {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+
+  #hands {
+      display: block;
+      position: absolute;
+      width: 90vw;
+      height: auto;
+      margin-top: -20vh;
+  }
+
+  #indexFlex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    min-height: 60vh;
+  }
+
+  #eyeCatch {
+    transform: rotate(-3deg);
+    width: 30vw;
+    padding: 1em;
+    margin-left: 1em;
+  }  
+  
+  #gotoAbout {
+    width: 30vw;
+    margin-top: 2vh;
+  }
+
+  #gotoAboutButton {
+    margin-top: 100px;
+  }
+
+  #emailUs {
+    width: 30vw;
+    margin-top: 2vh;
+  }
+
+  #introText {
+    transform: rotate(0);
+    width: calc(90vw - 6em);
+    padding: 0;
+    margin: 0;
+    margin-top: 2vh;
+    padding: 1em;
+    padding-right: 5em;
+    padding-bottom: 2em;
+    height: fit-content;
+
+    bottom: 2em;
+  }
+}

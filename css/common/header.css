@@ -1,0 +1,130 @@
+:root {
+    --headerSize: 4vh;
+}
+
+header {
+    z-index: 100;
+}
+
+.coming-soon-regular {
+    font-family: "Coming Soon", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+#headerContent img {
+    max-width: 3em;
+    max-height: 3em;
+}
+
+header {
+    width: 100vw;
+    height: var(--headerSize);
+    max-height: 100px;
+    justify-content: center;
+    position: fixed;
+}
+
+#colourLayer {
+    background-color: #B39EB5;
+    top: 0;
+    z-index: 12;
+
+    width: 100vw;
+    height: var(--headerSize);
+    max-height: 100px;
+    position: fixed;
+}
+
+#colourLayer::before {
+    content: "";
+    display:block;
+    background: #FAC898;
+    width:200%;
+    height:10vh;
+    max-height: 100px;
+    position:absolute;
+    left:-30%;
+    top:-60%;
+    z-index:10;
+    transform: rotate(15deg);
+}   
+
+#colourLayer::after {
+    content: "";
+    display:block;
+    background: #B39EB5;
+    width:200%;
+    height:10vh;
+    max-height: 100px;
+    position:absolute;
+    left:-30%;
+    top:-60%;
+    z-index:11;
+    transform: rotate(-3deg);
+}
+
+#headerContent {
+    display: flex;
+    width: 100%;
+    height: var(--headerSize);
+    flex-direction: row;
+    flex-wrap: false;
+    justify-content: start;
+    align-items: center;
+    z-index: 13;
+}
+
+.titleElement {
+    z-index: 14;
+    font-family: "Coming Soon", "Calibri";
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 1em !important;
+    margin-top: 1em !important;
+    margin: 0;
+}
+
+#logo {
+    border-radius: 50% 50% 20% 20%;
+    height: 140%;
+    width: auto;
+    padding: 0;
+}
+
+#headerSpacer {
+    height: 4em;
+}
+
+@media (min-width: 800px) {
+    colourLayer::before {
+        height: 15vh;
+        top: -100;
+    }
+}
+
+
+@media (min-width: 1000px) {
+
+    #headerSpacer {
+        height: 3em;
+    }
+
+    #colourLayer::before {
+        transform: rotate(3deg);
+    }
+
+    #colourLayer::after {
+        transform: rotate(-1deg);
+    }
+
+    #headerContent h1 {
+        font-size: 1.2em;
+    }
+
+    #headerContent {
+        margin-top: 1vh;
+        margin-left: 4vw;
+    }
+}
